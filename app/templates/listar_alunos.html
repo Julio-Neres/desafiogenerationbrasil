@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    
+    <div class="container" id="listaaluno">
+    <h1>Lista de Alunos</h1>
+    <table class="table table-striped">
+        <tr class="thead-dark">
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Nota do Primeiro Semestre</th>
+            <th>Nota do Segundo Semestre</th>
+            <th>Nome do Professor</th>
+            <th>Número da Sala</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr class="entradadedados">
+            <td width="150px">{{ aluno.id }}</td>
+            <td width="150px">{{ aluno.nome }}</td>
+            <td width="150px">{{ aluno.idade }}</td>
+            <td width="150px">{{ aluno.nota_primeiro_semestre }}</td>
+            <td width="150px">{{ aluno.nota_segundo_semestre }}</td>
+            <td width="150px">{{ aluno.nome_professor }}</td>
+            <td width="150px">{{ aluno.numero_sala }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <a href="/adicionar_aluno" id="voltar" class="btn btn-primary">Adicionar Aluno</a>
+</body>
+</html>

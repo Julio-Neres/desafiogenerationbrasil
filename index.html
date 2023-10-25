@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>GenerationBrasil</title>
+</head>
+<body>
+    <header class="cabeçalho">
+    <img id="logo" src="/imagens/Logo-fundotransparente.png" alt="" width="100px" height="100px">
+    
+    </header>
+
+    <form action="" method="POST" name="formulario" id="iformulario">
+        <label for="ID">Informe o ID:</label>
+        <input type="text" name="ID" id="ID">
+        <label for="inomeAluno">Nome do aluno:</label>
+        <input type="text" name="nomeAluno" id="inomeAluno">
+        <label for="inotasemestre1">Informe a nota do 1º semestre:</label>
+        <input type="text" name="notasemestre1" id="inotasemestre1">
+        <label for="inotasemestre2">Informe a nota do 2º semestre:</label>
+        <input type="text" name="notasemestre2" id="inotasemestre2">
+        <label for="inomeprofessor">Informe o nome do professor:</label>
+        <input type="text" name="nomeprofessor" id="inomeprofessor">
+        <label for="insala">Informe o número da sala:</label>
+        <input type="text" name="sala" id="insala">
+    </form>
+     <button id="ienviar" type="submit">enviar</button>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Nota 1º Semestre</th>
+            <th>Nota 2º Semestre</th>
+            <th>Professor</th>
+            <th>Sala</th>
+            <th>Ação</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno.id }}</td>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.idade }}</td>
+            <td>{{ aluno.nota_semestre1 }}</td>
+            <td>{{ aluno.nota_semestre2 }}</td>
+            <td>{{ aluno.nome_professor }}</td>
+            <td>{{ aluno.sala }}</td>
+            <td><a href="{{ url_for('edit_aluno', id=aluno.id) }}">Editar</a> | <a href="{{ url_for('delete_aluno', id=aluno.id) }}">Excluir</a></td>
+        </tr>
+        {% endfor %}
+    </table>78
+
+
+   
+</body>
+
+
+</html>

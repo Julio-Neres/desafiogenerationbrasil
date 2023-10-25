@@ -1,0 +1,21 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: escola
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  web:
+    build: ./app
+    container_name: minha-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres

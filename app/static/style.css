@@ -1,0 +1,65 @@
+body{
+  background-color: rgb(0, 0, 0);
+}
+
+
+h1{
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    color: #ffff;
+  
+    
+}
+
+#iformulario{
+    border-radius: 20px;
+    font-size: x-large;
+    color: #ffff;
+    text-align: center;
+    justify-content: center;
+}
+
+#form:hover{
+color:bisque
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.thead-dark{
+  color: #ffff;
+  font-size:large;
+  margin-top: 250px;  
+  background-color: #444; 
+}
+
+.entradadedados{
+  color: #ffff;
+  border-radius: 20px;
+  font-size: x-large;
+  text-align: center;
+  margin-top: 150px; 
+  background-color: #444; 
+ 
+}
+
+
+#voltar{
+  display: block;
+  margin-left: 500px;
+  margin-top: 50px;
+  border: solid #595151;
+  background-color:  #000;
+  text-align: center;
+  width: 200px;
+}
+
+#listaaluno{
+  margin-left: 50px;
+  margin-top: 150px;
+
+}

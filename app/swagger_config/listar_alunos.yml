@@ -1,0 +1,13 @@
+swagger: '2.0'
+info:
+  title: 'Documentação da API de Alunos'
+  description: 'Documentação da API para listar alunos'
+  version: '1.0'
+paths:
+  /:
+    get:
+      summary: 'Listar Alunos'
+      description: 'Retorna a lista de todos os alunos'
+      responses:
+        200:
+          description: 'Lista de alunos'

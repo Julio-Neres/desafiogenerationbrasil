@@ -1,0 +1,13 @@
+swagger: '2.0'
+info:
+  title: 'Documentação da API de Alunos'
+  description: 'Documentação da API para adicionar um aluno'
+  version: '1.0'
+paths:
+  /adicionar_aluno:
+    post:
+      summary: 'Adicionar Aluno'
+      description: 'Adiciona um aluno à base de dados'
+      responses:
+        200:
+          description: 'Aluno adicionado com sucesso'
